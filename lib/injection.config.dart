@@ -13,7 +13,7 @@ import 'infrastructure/core/network/network_manager.dart' as _i4;
 import 'infrastructure/tracking/data-source/remote_covid_tracking_data_source.dart'
     as _i5;
 import 'infrastructure/tracking/default_covid_tracking_repository.dart' as _i7;
-import 'presentation/tracking/bloc/covid_tracking_bloc.dart'
+import 'presentation/pages/tracking/bloc/covid_tracking_bloc.dart'
     as _i8; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars

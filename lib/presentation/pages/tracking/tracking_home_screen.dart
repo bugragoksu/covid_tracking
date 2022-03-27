@@ -1,6 +1,6 @@
 import 'package:covid_tracking/injection.dart';
-import 'package:covid_tracking/presentation/tracking/bloc/covid_tracking_bloc.dart';
-import 'package:covid_tracking/presentation/widgets/country_list.dart';
+import 'package:covid_tracking/presentation/pages/tracking/bloc/covid_tracking_bloc.dart';
+import 'package:covid_tracking/presentation/pages/tracking/widgets/country_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

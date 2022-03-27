@@ -1,5 +1,5 @@
 import 'package:covid_tracking/injection.dart';
-import 'package:covid_tracking/presentation/tracking/tracking_home_screen.dart';
+import 'package:covid_tracking/presentation/pages/tracking/tracking_home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

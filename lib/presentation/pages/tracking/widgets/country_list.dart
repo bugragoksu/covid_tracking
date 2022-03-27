@@ -1,5 +1,5 @@
 import 'package:covid_tracking/domain/tracking/entities/covid_tracking.dart';
-import 'package:covid_tracking/presentation/widgets/text_card.dart';
+import 'package:covid_tracking/presentation/tracking/widgets/text_card.dart';
 import 'package:flutter/material.dart';
 
 class CountryList extends StatelessWidget {
