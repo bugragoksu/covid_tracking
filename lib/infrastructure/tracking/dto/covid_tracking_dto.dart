@@ -1,3 +1,4 @@
+import 'package:covid_tracking/domain/tracking/entities/covid_tracking.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'covid_tracking_dto.g.dart';
@@ -23,6 +24,14 @@ class CovidTrackingDto {
   String totalCasesText;
   String totalDeathsText;
   String totalRecoveredText;
+
+  CovidTracking toCovidTracking() => CovidTracking(
+        countryText,
+        lastUpdate,
+        totalCasesText,
+        totalDeathsText,
+        totalRecoveredText,
+      );
 
   CovidTrackingDto fromJson(Map<String, dynamic> json) => _$CovidTrackingDtoFromJson(json);
 
