@@ -14,14 +14,14 @@ class DefaultRemoteCovidTrackingDataSource implements RemoteCovidTrackingDataSou
   final NetworkManager _networkManager;
 
   @override
-  Future<List<CovidTrackingDto>> getCountries() {
-    // TODO: implement getCountries
-    throw UnimplementedError();
+  Future<List<CovidTrackingDto>> getCountries() async {
+    final result = await _networkManager.get("/");
+    return (result.data as List).map((e) => CovidTrackingDto.fromJsonFactory(e)).toList();
   }
 
   @override
-  Future<CovidTrackingDto> getCountryDetail({required String countryCode}) {
-    // TODO: implement getCountryDetail
-    throw UnimplementedError();
+  Future<CovidTrackingDto> getCountryDetail({required String countryCode}) async {
+    final result = await _networkManager.get("/$countryCode");
+    return CovidTrackingDto.fromJsonFactory(result.data);
   }
 }

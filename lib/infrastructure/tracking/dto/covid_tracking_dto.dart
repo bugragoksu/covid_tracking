@@ -27,4 +27,6 @@ class CovidTrackingDto {
   CovidTrackingDto fromJson(Map<String, dynamic> json) => _$CovidTrackingDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$CovidTrackingDtoToJson(this);
+
+  static const fromJsonFactory = _$CovidTrackingDtoFromJson;
 }
