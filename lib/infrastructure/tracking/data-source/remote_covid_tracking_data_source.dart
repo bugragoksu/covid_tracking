@@ -15,7 +15,7 @@ class DefaultRemoteCovidTrackingDataSource implements RemoteCovidTrackingDataSou
 
   @override
   Future<List<CovidTrackingDto>> getCountries() async {
-    final result = await _networkManager.get("/");
+    final result = await _networkManager.get("");
     return (result.data as List).map((e) => CovidTrackingDto.fromJsonFactory(e)).toList();
   }
 

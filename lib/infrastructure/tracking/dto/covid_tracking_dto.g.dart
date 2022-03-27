@@ -8,24 +8,24 @@ part of 'covid_tracking_dto.dart';
 
 CovidTrackingDto _$CovidTrackingDtoFromJson(Map<String, dynamic> json) =>
     CovidTrackingDto(
-      activeCasesText: json['activeCasesText'] as String,
-      countryText: json['countryText'] as String,
-      lastUpdate: json['lastUpdate'] as String,
-      newCasesText: json['newCasesText'] as String,
-      newDeathsText: json['newDeathsText'] as String,
-      totalCasesText: json['totalCasesText'] as String,
-      totalDeathsText: json['totalDeathsText'] as String,
-      totalRecoveredText: json['totalRecoveredText'] as String,
+      activeCasesText: json['Active Cases_text'] as String?,
+      countryText: json['Country_text'] as String?,
+      lastUpdate: json['Last Update'] as String?,
+      newCasesText: json['New Cases_text'] as String?,
+      newDeathsText: json['New Deaths_text'] as String?,
+      totalCasesText: json['Total Cases_text'] as String?,
+      totalDeathsText: json['Total Deaths_text'] as String?,
+      totalRecoveredText: json['Total Recovered_text'] as String?,
     );
 
 Map<String, dynamic> _$CovidTrackingDtoToJson(CovidTrackingDto instance) =>
     <String, dynamic>{
-      'activeCasesText': instance.activeCasesText,
-      'countryText': instance.countryText,
-      'lastUpdate': instance.lastUpdate,
-      'newCasesText': instance.newCasesText,
-      'newDeathsText': instance.newDeathsText,
-      'totalCasesText': instance.totalCasesText,
-      'totalDeathsText': instance.totalDeathsText,
-      'totalRecoveredText': instance.totalRecoveredText,
+      'Active Cases_text': instance.activeCasesText,
+      'Country_text': instance.countryText,
+      'Last Update': instance.lastUpdate,
+      'New Cases_text': instance.newCasesText,
+      'New Deaths_text': instance.newDeathsText,
+      'Total Cases_text': instance.totalCasesText,
+      'Total Deaths_text': instance.totalDeathsText,
+      'Total Recovered_text': instance.totalRecoveredText,
     };
