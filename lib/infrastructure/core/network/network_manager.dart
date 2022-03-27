@@ -1,3 +1,4 @@
+import 'package:covid_tracking/infrastructure/core/exceptions/response_exception.dart';
 import 'package:covid_tracking/infrastructure/core/network/network_config.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
@@ -12,7 +13,7 @@ class NetworkManager {
     try {
       return await _dio.get(url, queryParameters: queryParameters);
     } on DioError catch (e) {
-      throw (Exception(e.message));
+      throw (ResponseException(e.message));
     }
   }
 }
