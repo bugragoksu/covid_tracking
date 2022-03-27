@@ -9,7 +9,11 @@ class NetworkManager {
   final Dio _dio;
 
   Future<Response> get(String url, {Map<String, dynamic>? queryParameters}) async {
-    return await _dio.get(url, queryParameters: queryParameters);
+    try {
+      return await _dio.get(url, queryParameters: queryParameters);
+    } on DioError catch (e) {
+      throw (Exception(e.message));
+    }
   }
 }
 
