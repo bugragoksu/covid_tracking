@@ -1,7 +1,8 @@
 import 'package:covid_tracking/domain/tracking/entities/covid_tracking.dart';
-import 'package:covid_tracking/presentation/pages/tracking/tracking_detail_screen.dart';
 import 'package:covid_tracking/presentation/pages/tracking/widgets/text_card.dart';
 import 'package:flutter/material.dart';
+import 'package:covid_tracking/presentation/core/router/router.gr.dart';
+import 'package:auto_route/auto_route.dart';
 
 class CountryList extends StatelessWidget {
   const CountryList({
@@ -19,11 +20,8 @@ class CountryList extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.1,
               child: InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => TrackingDetailScreen(countryCode: covidTrackingList[index].countryText),
-                      ),
+                    context.router.push(
+                      TrackingDetailScreenRoute(countryCode: covidTrackingList[index].countryText),
                     );
                   },
                   child: TextCard(text: covidTrackingList[index].countryText)),

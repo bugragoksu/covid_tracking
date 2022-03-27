@@ -5,9 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class TrackingHomeScreen extends StatefulWidget {
-  const TrackingHomeScreen({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  const TrackingHomeScreen({Key? key}) : super(key: key);
 
   @override
   State<TrackingHomeScreen> createState() => _TrackingHomeScreenState();
@@ -26,7 +24,7 @@ class _TrackingHomeScreenState extends State<TrackingHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text("Countries"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
