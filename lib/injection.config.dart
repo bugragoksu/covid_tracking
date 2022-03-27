@@ -12,8 +12,9 @@ import 'domain/tracking/covid_tracking_repository.dart' as _i6;
 import 'infrastructure/core/network/network_manager.dart' as _i4;
 import 'infrastructure/tracking/data-source/remote_covid_tracking_data_source.dart'
     as _i5;
-import 'infrastructure/tracking/default_covid_tracking_repository.dart'
-    as _i7; // ignore_for_file: unnecessary_lambdas
+import 'infrastructure/tracking/default_covid_tracking_repository.dart' as _i7;
+import 'presentation/tracking/bloc/covid_tracking_bloc.dart'
+    as _i8; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -28,6 +29,8 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.factory<_i6.CovidTrackingRepository>(() =>
       _i7.DefaultCovidTrackingRepository(
           get<_i5.RemoteCovidTrackingDataSource>()));
+  gh.factory<_i8.CovidTrackingBloc>(
+      () => _i8.CovidTrackingBloc(get<_i6.CovidTrackingRepository>()));
   return get;
 }
 
