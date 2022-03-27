@@ -13,7 +13,10 @@ class NetworkManager {
     try {
       return await _dio.get(url, queryParameters: queryParameters);
     } on DioError catch (e) {
-      throw (ResponseException(e.message));
+      throw (ResponseException(
+        message: e.message,
+        statusCode: e.response?.statusCode,
+      ));
     }
   }
 }
